@@ -10,7 +10,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // -d runs it in background, --remove-orphans cleans up old stuff
-                sh 'docker compose -p mern-app-f mern-docker-compose.yaml up -d'
+                sh 'docker compose -p mern-app -f mern-docker-compose.yaml up -d'
             }
         }
     }
